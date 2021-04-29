@@ -1,14 +1,17 @@
+// Check if String is a number
 function isNumeric(str) {
     if (typeof str != "string") return false;
     return !isNaN(str) && !isNaN(parseFloat(str));
 }
 
-  async function sleep(ms) {
+// W... A... I... T...
+async function sleep(ms) {
     return new Promise((resolve) => {
-      setTimeout(resolve, ms);
+        setTimeout(resolve, ms);
     });
 }
 
+// Randomly capitalize strings
 function randomCaps(str) {
     working = '';
     Array.from(str).forEach(element => {
@@ -21,6 +24,7 @@ function randomCaps(str) {
     return working;
 }
 
+// Export Said Functions
 module.exports = {
     isNumeric,
     sleep,

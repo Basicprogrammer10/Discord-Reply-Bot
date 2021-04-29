@@ -1,7 +1,8 @@
+// Import ... things
 const common = require('./common.js')
-const Discord = require('discord.js');
+const Discord = require('discord.js'); // Make sure its discord.js 11 (for self bots)
 const client = new Discord.Client();
-const config = require('./config.json');
+const config = require('./config.json'); // Load token from config
 
 client.on('ready', () => {
     console.log("\033[32mLogged in as \033[36m" + client.user.tag + "\033[0m");
@@ -15,4 +16,5 @@ client.on("message", async (msg) => {
     msg.channel.send(`>>> ${common.randomCaps(msg.content)}`);
 });
 
+// Login
 client.login(config.token);
